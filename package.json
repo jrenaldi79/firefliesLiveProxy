@@ -1,0 +1,58 @@
+{
+  "name": "firefliesproxy",
+  "version": "1.0.0",
+  "description": "A proxy service for Fireflies.ai real-time transcriptions",
+  "main": "dist/server.js",
+  "scripts": {
+    "start": "node dist/server.js",
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:api": "tsx scripts/test-api.ts"
+  },
+  "keywords": [
+    "fireflies.ai",
+    "transcription",
+    "realtime",
+    "websocket",
+    "supabase"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0",
+    "@types/compression": "^1.8.0",
+    "@types/cors": "^2.8.18",
+    "compression": "^1.8.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "helmet": "^7.2.0",
+    "module-alias": "^2.2.2",
+    "socket.io-client": "^4.7.2",
+    "tsx": "^4.7.1",
+    "uuid": "^9.0.1"
+  },
+  "_moduleAliases": {
+    "@": "./dist"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@types/express": "^4.17.22",
+    "@types/node": "^22.15.21",
+    "@types/uuid": "^10.0.0",
+    "@types/ws": "^8.18.1",
+    "@typescript-eslint/eslint-plugin": "^8.32.1",
+    "@typescript-eslint/parser": "^8.32.1",
+    "axios": "^1.9.0",
+    "eslint": "^9.27.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.4.0",
+    "prettier": "^3.5.3",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.3"
+  }
+}
